@@ -1,5 +1,7 @@
 # 👉 Code for Stage 7 goes here
 class Student:
+    student_count = 0
+
     def __init__(self, name, age, courses, pocket_money, location, salary):
         self.name = name
         self.age = age
@@ -7,6 +9,7 @@ class Student:
         self.money = pocket_money
         self.location = location
         self.salary = salary
+        Student.student_count += 1
 
 #Function => Method
 
@@ -26,4 +29,6 @@ student3 = Student("Nara", 4, ["Math", "Physics"], 1000000, "Frozen island", 20)
 display_student_info(student1)
 display_student_info(student2)
 display_student_info(student3)
+
+print(f"Student count is {Student.student_count}")
 # Feel free to modify or expand it
